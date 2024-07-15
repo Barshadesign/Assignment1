@@ -3,11 +3,11 @@ Algorithm 1:
 Calculate Highest Marks
 
 Function markHighest(marks):
-    Set highest to first mark
-        For each mark starting from second:
-        If mark > highest then
-            Set highest to mark
-	EndIf
+ Set highest to first mark
+  For each mark starting from second:
+    If mark > highest then
+     Set highest to mark
+EndIf
     End For
     Return highest
 End Function
