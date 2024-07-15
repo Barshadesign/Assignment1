@@ -1,21 +1,25 @@
-Algorithm 1: Calculate Highest And Lowest Marks 
+Algorithm 1: 
 
-Input: Input array of marks (Marks) 
-Output: Show Highest and lowest marks among all the array of marks (highest, lowest)
+Calculate Highest Marks
 
-Set highest to Marks[0] 
-Set Lowest to Marks[0]
+Function markHighest(marks):
+    Set highest to first mark
+        For each mark starting from second:
+        If mark > highest then
+            Set highest to mark
+	EndIf
+    End For
+    Return highest
+End Function
 
+Calculate Lowest Marks
 
-For each Mark in Marks starting from the second element do
-    If Mark > highest then
-        Set highest to Mark
-    EndIf
-
-    If Mark < lowest then
-        Set lowest to Mark
-    EndIf
-EndFor
-
-Print "Highest Mark among all marks: " + highest
-Print "Lowest Mark among all marks: " + lowest
+Function markLowest(marks):
+    Set lowest to first mark
+    For each mark starting from second:
+        If mark < lowest:
+            Set lowest to mark
+	EndIf
+    End For
+    Return lowest
+End Function

@@ -1,0 +1,35 @@
+Algorithm 2: 
+
+Calculate Mean Pseudocode
+
+Function calcMean(marks):
+    Set totalSum to 0
+    For each mark in marks:
+        Add mark to totalSum
+    End For
+    Divide totalSum by number of mark to get mean
+    Return mean
+End Function
+
+
+Calculate Standard Deviation Pseudocode
+
+Function calcStandardDeviation(marks, mean):
+    Set totalSquaredDifference to 0
+    For each mark in marks:
+        i. Subtract mean from mark
+        ii. Square the difference and add to totalSquaredDifference
+    End For
+    Divide totalSquaredDifference by number of marks and get variance
+    Return standardDeviation
+End Function
+
+Function sqrt(number):
+    Set oldEstimate to 0
+    Set newEstimate to number divided by 2
+    While oldEstimate is not equal to newEstimate:
+        Set oldEstimate to newEstimate
+        Set newEstimate to average of oldEstimate and number divided by oldEstimate
+    End While
+    Return newEstimate
+End Function
