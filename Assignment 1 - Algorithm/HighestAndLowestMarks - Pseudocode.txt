@@ -19,5 +19,3 @@ EndFor
 
 Print "Highest Mark among all marks: " + highest
 Print "Lowest Mark among all marks: " + lowest
-
-}
