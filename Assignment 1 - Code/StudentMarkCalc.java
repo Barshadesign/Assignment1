@@ -15,7 +15,7 @@ public class StudentMarkCalc {
         Scanner scanner = new Scanner(System.in);
         
         // Array for marks of 30 student
-        float[] Marks = new float[5];  
+        float[] Marks = new float[30];  
         String Name;
 
         // Input Assignment name
@@ -41,17 +41,54 @@ public class StudentMarkCalc {
             }
         }
 
-        System.out.println("These are marks for " + Name);
 
         // Show Assignment name and all Marks
         System.out.println("\nAssignment name: " + Name);
         System.out.println("Student has got following Marks:");
         for (int i = 0; i < Marks.length; i++) {
-            System.out.println("Student " + (i + 1) + "- " + Marks[i]);   // Show each student's marks
+            System.out.println("Student " + (i + 1) + "- " + Marks[i]);   // Show each student's marks 
 
         }
-
         
+        // Calculate highest and Lowest marks in array
+
+        float highest = markHighest(Marks);
+        float lowest = markLowest(Marks);
+        
+        // Show highest and lowest marks
+
+        System.out.println("\nHighest Mark among all marks: " + highest);
+        System.out.println("Lowest Mark among all marks: " + lowest);
+
+        scanner.close();
     }
 
+
+    private static float markHighest(float[] marks) {
+        //Start with first mark as highest
+        float highest = marks[0];
+        //Iterate through all mark
+        for (int i = 1; i < marks.length; i++) {
+            // If current marks is higher than markHighest, update highest
+            if (marks[i] > highest) {
+                highest = marks[i];
+            }
+        }
+        //Return highest mark
+        return highest;
+    }
+
+    private static float markLowest(float[] marks) {
+        //Start with first mark as lowest
+        float lowest = marks[0];
+        //Iterate through all mark
+        for (int i = 1; i < marks.length; i++) {
+            // If current marks is lower than markLowest, update lowest
+            if (marks[i] < lowest) {
+                lowest = marks[i];
+            }
+        }
+        //Return lowest mark
+        return lowest;
+    }
 }

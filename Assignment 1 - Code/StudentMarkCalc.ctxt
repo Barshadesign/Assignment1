@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=StudentMarkCalc
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=marks
+comment2.target=float\ markHighest(float[])
+comment3.params=marks
+comment3.target=float\ markLowest(float[])
+numComments=4
